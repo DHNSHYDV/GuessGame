@@ -7,5 +7,15 @@ function checkGuess(){
         msg.style.color="orange";
         return;
     }
-    
+    if(guess===secret){
+        msg.textContent="Correct! 🍾"
+        msg.style.color="green";
+    }else if(guess > secret){
+        msg.textContent="⏫Too high! Try again."
+        msg.style.color="red";
+    }else{
+        msg.textContent="⬇️Too low! Try again."
+        msg.style.color="red";
+    }
+
 }
